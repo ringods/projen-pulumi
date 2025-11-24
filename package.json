@@ -1,5 +1,5 @@
 {
-  "name": "projen-pulumi",
+  "name": "@ringods/projen-pulumi",
   "repository": {
     "type": "git",
     "url": "https://github.com/ringo/projen-pulumi.git"
@@ -56,11 +56,14 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
+  "peerDependencies": {
+    "projen": "^0.98.19"
+  },
+  "dependencies": {
+    "projen": "^0.98.19"
+  },
   "main": "lib/index.js",
   "license": "Apache-2.0",
-  "publishConfig": {
-    "access": "public"
-  },
   "version": "0.0.0",
   "jest": {
     "coverageProvider": "v8",

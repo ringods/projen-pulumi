@@ -1,17 +1,19 @@
 import { cdk, javascript } from 'projen';
+
 const project = new cdk.JsiiProject({
   author: 'Ringo De Smet',
   authorAddress: 'ringo@de-smet.name',
   defaultReleaseBranch: 'main',
   jsiiVersion: '~5.9.0',
-  name: 'projen-pulumi',
+  name: '@ringods/projen-pulumi',
   packageManager: javascript.NodePackageManager.NPM,
   projenrcTs: true,
   repositoryUrl: 'https://github.com/ringo/projen-pulumi.git',
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  gitignore: ['.idea/'],
+  deps: ['projen'], /* Runtime dependencies of this module. */
+  devDeps: ['projen', 'ts-node'], /* Build dependencies for this module. */
+  peerDeps: ['projen'], /* Peer dependencies of this module. */
 });
+
+
 project.synth();
