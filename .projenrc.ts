@@ -1,4 +1,5 @@
 import { cdk, javascript } from 'projen';
+import { ReleaseTrigger } from 'projen/lib/release';
 
 const project = new cdk.JsiiProject({
   author: 'Ringo De Smet',
@@ -13,6 +14,7 @@ const project = new cdk.JsiiProject({
   deps: ['projen'], /* Runtime dependencies of this module. */
   devDeps: ['projen', 'ts-node'], /* Build dependencies for this module. */
   peerDeps: ['projen'], /* Peer dependencies of this module. */
+  releaseTrigger: ReleaseTrigger.manual(),
 });
 
 // @ts-ignore
