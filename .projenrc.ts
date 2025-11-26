@@ -15,5 +15,7 @@ const project = new cdk.JsiiProject({
   peerDeps: ['projen'], /* Peer dependencies of this module. */
 });
 
+// @ts-ignore
+project.github.actions.set('actions/checkout', 'actions/checkout@v6');
 
 project.synth();
