@@ -15,6 +15,7 @@ const project = new cdk.JsiiProject({
   devDeps: ['projen', 'ts-node'], /* Build dependencies for this module. */
   peerDeps: ['projen'], /* Peer dependencies of this module. */
   releaseTrigger: ReleaseTrigger.manual(),
+  depsUpgrade: false,
 });
 
 // @ts-ignore
